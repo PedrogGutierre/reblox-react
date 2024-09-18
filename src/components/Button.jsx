@@ -6,11 +6,11 @@ const Button = ({ label, href = "", variant = "primary" }) => {
   switch (variant) {
     case "primary":
       styles =
-        "w-full bg-secondary-blue text-center transition text-light-white px-6 py-3 rounded hover:bg-hover-blue font-bold";
+        "w-full block max-w-64 bg-secondary-blue text-center transition text-light-white px-6 py-3 rounded hover:bg-hover-blue font-bold";
       break;
     case "secondary":
       styles =
-        "w-full bg-white text-center border-2 transition border-transparent text-secondary-blue px-6 py-3 rounded hover:border-secondary-blue font-bold";
+        "w-full block max-w-64 bg-white text-center border-2 transition text-secondary-blue px-6 py-3 rounded border-secondary-blue hover:bg-secondary-blue hover:text-light-white font-bold";
       break;
   }
 

@@ -55,7 +55,7 @@ const About = () => {
           </p>
         </section>
 
-        <section className="w-full">
+        <section className="w-full flex flex-col items-center">
           <h3 className="bg-secondary-blue text-light-white text-center w-full font-bold text-3xl py-4 mb-6">
             Nossa Solução
           </h3>
@@ -78,7 +78,7 @@ const About = () => {
             que simulam a emoção de uma corrida ao vivo, tudo de maneira
             interativa e imersiva.
           </p>
-          <Button label="Veja mais sobre a experiência" href="/"/>
+          <Button label="Veja mais sobre a experiência" href="/solution" />
         </section>
       </div>
     </main>

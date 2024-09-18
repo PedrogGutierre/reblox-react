@@ -1,12 +1,14 @@
 import Button from "../components/Button";
 import { Link } from "react-router-dom"; // Para navegação interna
 
+import FormulaE from "../imgs/formulaE.png";
+
 const Home = () => {
   return (
-    <main className="bg-light-gray flex flex-col items-center gap-20">
+    <main className="bg-light-gray flex flex-col items-center">
       {/* Banner Principal */}
-      <section className="relative w-full h-[90vh] flex justify-center items-center bg-banner-image bg-cover ">
-        <div className="z-10 text-center">
+      <section className="relative w-full h-[90vh] flex justify-center items-center bg-banner-image bg-cover backdrop-brightness-50">
+        <div className=" text-center bg-opacity-60 z-10 flex flex-col justify-center items-center gap-4 w-full h-full bg-black">
           <h1 className="text-5xl font-bold text-light-white">
             Imersão Virtual na Fórmula E
           </h1>
@@ -18,57 +20,52 @@ const Home = () => {
       </section>
 
       {/* Introdução à Fórmula E */}
-      <section className="w-full max-w-screen-lg text-center px-6 md:px-0">
-        <h2 className="text-3xl font-bold mb-4">O que é a Fórmula E?</h2>
-        <p className="text-lg leading-relaxed mb-4">
-          A Fórmula E é a primeira categoria de automobilismo totalmente
-          elétrica, promovendo a sustentabilidade e inovação. Com corridas em
-          circuitos urbanos ao redor do mundo, a Fórmula E busca acelerar a
-          transição para tecnologias de energia limpa.
-        </p>
-        <Button label="Saiba mais" href="/sobre" variant="secondary" />
+      <section className="px-4 w-full flex flex-col gap-12 items-center max-w-screen-lg py-16 md:px-0">
+        <h2 className="text-3xl font-bold">O que é a Fórmula E?</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <p className="text-lg leading-relaxed">
+            A Fórmula E é a primeira categoria de automobilismo totalmente
+            elétrica, promovendo a sustentabilidade e inovação. Com corridas em
+            circuitos urbanos ao redor do mundo, a Fórmula E busca acelerar a
+            transição para tecnologias de energia limpa.
+          </p>
+          <img src={FormulaE} alt="" />
+        </div>
+        <Button label="Saiba mais" href="/about" variant="secondary" />
       </section>
 
       {/* Problema */}
-      <section className="w-full bg-secondary-blue text-light-white py-16">
-        <div className="max-w-screen-lg mx-auto text-center px-6 md:px-0">
-          <h2 className="text-3xl font-bold mb-6">
-            Problemas a Serem Resolvidos
-          </h2>
-          <p className="text-lg leading-relaxed mb-8">
-            A Fórmula E enfrenta desafios como baixa visibilidade, falta de
-            engajamento entre os jovens e a experiência de evento limitada.
-          </p>
-          <Button label="Veja como resolvemos isso" href="/solucao" />
+      <section className="w-full bg-primary-blue text-light-white py-48 bg-logo-pattern bg-cover">
+        <div className="max-w-screen-lg flex flex-col items-center gap-4 md:flex-row mx-auto px-6 md:px-0">
+          <div className="flex flex-col ">
+            <h2 className="text-3xl font-bold mb-6">Nossa Solução</h2>
+            <p className="text-lg leading-relaxed mb-8">
+              Desenvolvemos uma experiência virtual no Roblox que permite ao
+              público vivenciar o mundo da Fórmula E de maneira interativa e
+              imersiva.
+            </p>
+            <Button label="Veja como resolvemos isso" href="/solution" />
+          </div>
+          <div className="grid grid-cols-2 grid-rows-2 max-w-96">
+            <img src={FormulaE} alt="" />
+            <img src={FormulaE} alt="" />
+            <img src={FormulaE} alt="" />
+            <img src={FormulaE} alt="" />
+          </div>
         </div>
-      </section>
-
-      {/* Nossa Solução */}
-      <section className="w-full max-w-screen-lg text-center px-6 md:px-0 py-16">
-        <h2 className="text-3xl font-bold mb-4">Nossa Solução</h2>
-        <p className="text-lg leading-relaxed mb-6">
-          Desenvolvemos uma experiência virtual no Roblox que permite ao público
-          vivenciar o mundo da Fórmula E de maneira interativa e imersiva.
-        </p>
-        <Link
-          to="/solucao"
-          className="inline-block bg-secondary-blue text-light-white px-6 py-3 font-bold rounded-lg"
-        >
-          Saiba mais sobre a Solução
-        </Link>
       </section>
 
       {/* Galeria de Imagens (Preview) */}
-      <section className="w-full max-w-screen-lg px-6 md:px-0 py-16">
+      {/* <section className="w-full max-w-screen-lg px-6 md:px-0 py-16">
         <h2 className="text-3xl font-bold text-center mb-6">Galeria</h2>
-        {/* <GaleryPreview />  Componente que mostra algumas imagens da galeria */}
+         <GaleryPreview />  
         <div className="text-center mt-6">
           <Button label="Ver mais imagens" href="/galeria" />
         </div>
-      </section>
+      </section> */}
 
       {/* Call to Action Final */}
-      <section className="w-full bg-primary-blue text-light-white py-12">
+      <section className="w-full bg-hover-blue text-light-white py-32">
         <div className="max-w-screen-lg mx-auto text-center">
           <h2 className="text-4xl font-bold mb-4">
             Pronto para experimentar a Fórmula E?
