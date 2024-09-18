@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage:{
+        "logo-pattern":"url('/src/imgs/logoBackground.png')"
+      },
       colors: {
         'primary-blue': '#004C9C', 
         'secondary-blue': '#0099CC', 
