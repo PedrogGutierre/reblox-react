@@ -1,22 +1,16 @@
 import Button from "../components/Button";
-import BannerBg from "../imgs/banner-bg.png";
 import { Link } from "react-router-dom"; // Para navegação interna
 
 const Home = () => {
   return (
     <main className="bg-light-gray flex flex-col items-center gap-20">
       {/* Banner Principal */}
-      <section className="relative w-full h-[90vh] flex justify-center items-center">
-        <img
-          src={BannerBg}
-          alt="Banner da Fórmula E"
-          className="absolute w-full h-full object-cover brightness-50"
-        />
+      <section className="relative w-full h-[90vh] flex justify-center items-center bg-banner-image bg-cover ">
         <div className="z-10 text-center">
           <h1 className="text-5xl font-bold text-light-white">
             Imersão Virtual na Fórmula E
           </h1>
-          <p className="text-xl text-light-white mt-6 mb-4">
+          <p className="text-xl text-light-white">
             Explore o futuro da mobilidade elétrica.
           </p>
           <Button label="Experimente Agora" href="/experiencia" />
