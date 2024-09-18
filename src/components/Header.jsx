@@ -10,11 +10,19 @@ const Header = () => {
         </Link>
 
         <nav>
-          <ul className="flex flex-row gap-4">
+          <ul className="flex-row gap-4 hidden md:flex">
             <li>
               <Link
                 className="p-2 border-b-2 text-light-white font-bold border-transparent transition-colors hover:border-light-white"
                 to="/"
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="p-2 border-b-2 text-light-white font-bold border-transparent transition-colors hover:border-light-white"
+                to="/about"
               >
                 Sobre
               </Link>
@@ -22,19 +30,12 @@ const Header = () => {
             <li>
               <Link
                 className="p-2 border-b-2 text-light-white font-bold border-transparent transition-colors hover:border-light-white"
-                to="/"
+                to="/solution"
               >
-                Sobre
+                Solução
               </Link>
             </li>
-            <li>
-              <Link
-                className="p-2 border-b-2 text-light-white font-bold border-transparent transition-colors hover:border-light-white"
-                to="/"
-              >
-                Sobre
-              </Link>
-            </li>
+
           </ul>
         </nav>
       </div>
