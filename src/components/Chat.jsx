@@ -2,12 +2,13 @@ import { ChatBubbleOutline, SendOutlined } from "@mui/icons-material";
 import { useState } from "react";
 
 import useCreateChat from "../hooks/useCreateChat";
+import { SyncLoader } from "react-spinners";
 
 const Chat = () => {
-  const [chatOpened, setChatOpened] = useState(false);
+  const [chatOpened, setChatOpened] = useState(true);
   const [message, setMessage] = useState("");
 
-  const { sendMessage, messages } = useCreateChat();
+  const { sendMessage, messages, loading } = useCreateChat();
 
   const handleSendMessage = (e) => {
     e.preventDefault();
@@ -22,24 +23,31 @@ const Chat = () => {
           <ul className="flex flex-col gap-2 pb-4 p-4 items-end">
             {messages &&
               messages.map((msg, index) => {
-                let styles = "rounded p-4 border";
+                if (index > 0) {
+                  let styles = "rounded p-4 border";
 
-                switch (msg.role) {
-                  case "user":
-                    styles +=
-                      " bg-secondary-blue text-light-white border-secondary-blue";
-                    break;
-                  case "model":
-                    styles += " self-start";
-                    break;
+                  switch (msg.role) {
+                    case "user":
+                      styles +=
+                        " bg-secondary-blue text-light-white border-secondary-blue";
+                      break;
+                    case "model":
+                      styles += " self-start";
+                      break;
+                  }
+
+                  return (
+                    <li key={index} className={styles}>
+                      {msg.parts[0].text}
+                    </li>
+                  );
                 }
-
-                return (
-                  <li key={index} className={styles}>
-                    {msg.parts[0].text}
-                  </li>
-                );
               })}
+            {loading && (
+              <li className="flex justify-center w-full mt-4">
+                <SyncLoader color="#0072a4 "/>
+              </li>
+            )}
           </ul>
 
           <form

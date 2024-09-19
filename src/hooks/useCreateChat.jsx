@@ -20,7 +20,9 @@ const useCreateChat = () => {
       ],
     },
   ]);
-  const [messages, setMessages] = useState([]);
+  const [messages, setMessages] = useState(history);
+
+  const [loading, setLoading] = useState(false)
 
   const generateChat = () => {
     const API_KEY = import.meta.env.VITE_API_KEY;
@@ -33,7 +35,9 @@ const useCreateChat = () => {
   const chat = generateChat();
 
   const sendMessage = async (message) => {
+    setLoading(true)
     await chat.sendMessage( message);
+    setLoading(false)
 
     setMessages(history);
   };
@@ -42,6 +46,7 @@ const useCreateChat = () => {
     chat,
     sendMessage,
     messages,
+    loading
   };
 };
 
