@@ -5,7 +5,7 @@ import useCreateChat from "../hooks/useCreateChat";
 import { SyncLoader } from "react-spinners";
 
 const Chat = () => {
-  const [chatOpened, setChatOpened] = useState(true);
+  const [chatOpened, setChatOpened] = useState(false);
   const [message, setMessage] = useState("");
 
   const { sendMessage, messages, loading } = useCreateChat();
