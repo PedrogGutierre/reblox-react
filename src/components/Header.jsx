@@ -1,38 +1,39 @@
 import Logo from "../imgs/logo.png";
+import {Link} from "react-router-dom"
 
 const Header = () => {
   return (
     <header className="fixed top-0 w-full bg-primary-blue py-3 z-50">
       <div className="max-w-7xl flex justify-between items-center px-8">
-        <a href="/">
+        <Link to="/">
           <img className="w-48" src={Logo} alt="" />
-        </a>
+        </Link>
 
         <nav>
           <ul className="flex-row gap-4 hidden md:flex">
             <li>
-              <a
+              <Link
                 className="p-2 border-b-2 text-light-white font-bold border-transparent transition-colors hover:border-light-white"
-                href="/"
+                to="/"
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 className="p-2 border-b-2 text-light-white font-bold border-transparent transition-colors hover:border-light-white"
-                href="/about"
+                to="/about"
               >
                 Sobre
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 className="p-2 border-b-2 text-light-white font-bold border-transparent transition-colors hover:border-light-white"
-                href="/solution"
+                to="/solution"
               >
                 Solução
-              </a>
+              </Link>
             </li>
 
           </ul>
