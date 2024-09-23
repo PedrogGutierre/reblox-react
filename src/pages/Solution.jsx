@@ -2,6 +2,10 @@ import ImgSolucao from "../imgs/rebloxsolucao.png";
 import Galery from "../components/sections/Galery"; // Galeria importada
 
 const Solucao = () => {
+
+  scrollTo(0,0)
+
+
   return (
     <main className="w-full flex flex-col items-center py-20 bg-light-gray">
       {/* Seção: Introdução */}

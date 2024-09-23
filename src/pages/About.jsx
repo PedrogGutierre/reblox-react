@@ -2,6 +2,9 @@ import Button from "../components/Button";
 import PrimeiroCarro from "../imgs/primeiro-carro.jpg";
 
 const About = () => {
+
+  scrollTo(0,0)
+
   return (
     <main className="w-full flex justify-center py-20 bg-light-gray">
       <div className="flex flex-col items-center w-full max-w-screen-lg gap-8 px-6 md:px-0">
