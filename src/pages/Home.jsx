@@ -1,9 +1,19 @@
 import Button from "../components/Button";
-import { Link } from "react-router-dom"; // Para navegação interna
+import { Link } from "react-router-dom";
 
 import FormulaE from "../imgs/formulaE.png";
 
+import imgBanco from "../imgs/banco.png"
+import imgPitstops from "../imgs/pitstops.png"
+import imgPodio from "../imgs/podio.png"
+import imgReblox from "../imgs/rebloxsolucao.png"
+
+
 const Home = () => {
+
+  scrollTo(0,0)
+
+
   return (
     <main className="bg-light-gray flex flex-col items-center">
       {/* Banner Principal */}
@@ -37,7 +47,7 @@ const Home = () => {
       {/* Problema */}
       <section className="w-full bg-primary-blue text-light-white py-48 bg-logo-pattern bg-cover">
         <div className="max-w-screen-lg flex flex-col items-center gap-4 md:flex-row mx-auto px-6 md:px-0">
-          <div className="flex flex-col ">
+          <div className="flex flex-col w-96">
             <h2 className="text-3xl font-bold mb-6">Nossa Solução</h2>
             <p className="text-lg leading-relaxed mb-8">
               Desenvolvemos uma experiência virtual no Roblox que permite ao
@@ -46,11 +56,11 @@ const Home = () => {
             </p>
             <Button label="Veja como resolvemos isso" href="/solution" />
           </div>
-          <div className="grid grid-cols-2 grid-rows-2 max-w-96">
-            <img src={FormulaE} alt="" />
-            <img src={FormulaE} alt="" />
-            <img src={FormulaE} alt="" />
-            <img src={FormulaE} alt="" />
+          <div className="grid flex-1 grid-cols-2 grid-rows-2">
+            <img className="aspect-video" src={imgBanco} alt="" />
+            <img className="aspect-video" src={imgPitstops} alt="" />
+            <img className="aspect-video" src={imgPodio} alt="" />
+            <img className="aspect-video" src={imgReblox} alt="" />
           </div>
         </div>
       </section>

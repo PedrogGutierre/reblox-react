@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import { Link } from "react-router-dom";
 import Logo from "../imgs/logo.png";
+=======
+import Logo from "../imgs/logo.png";
+import {Link} from "react-router-dom"
+>>>>>>> chatbot
 
 const Header = () => {
   return (
