@@ -11,7 +11,7 @@ import imgReblox from "../imgs/rebloxsolucao.png"
 
 const Home = () => {
 
-  scrollTo(0,0)
+  // scrollTo(0,0)
 
 
   return (
@@ -46,8 +46,8 @@ const Home = () => {
 
       {/* Problema */}
       <section className="w-full bg-primary-blue text-light-white py-48 bg-logo-pattern bg-cover">
-        <div className="max-w-screen-lg flex flex-col items-center gap-4 md:flex-row mx-auto px-6 md:px-0">
-          <div className="flex flex-col w-96">
+        <div className="max-w-screen-lg grid gap-4 grid-cols-1 md:grid-cols-5 mx-auto px-6 md:px-0">
+          <div className="flex flex-col col-span-2 justify-center">
             <h2 className="text-3xl font-bold mb-6">Nossa Solução</h2>
             <p className="text-lg leading-relaxed mb-8">
               Desenvolvemos uma experiência virtual no Roblox que permite ao
@@ -56,7 +56,7 @@ const Home = () => {
             </p>
             <Button label="Veja como resolvemos isso" href="/solution" />
           </div>
-          <div className="grid flex-1 grid-cols-2 grid-rows-2">
+          <div className="grid flex-1 grid-cols-2 grid-rows-2 col-span-3">
             <img className="aspect-video" src={imgBanco} alt="" />
             <img className="aspect-video" src={imgPitstops} alt="" />
             <img className="aspect-video" src={imgPodio} alt="" />
