@@ -12,6 +12,7 @@ import NotFound from "./pages/NotFound.jsx";
 
 const router = createBrowserRouter([
   {
+  
     path: "/",
     element: <App />,
     children: [
@@ -23,7 +24,9 @@ const router = createBrowserRouter([
       }
     ],
   },
-]);
+],{
+  basename:"/reblox-react/"
+});
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
