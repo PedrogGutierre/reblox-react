@@ -1,7 +1,19 @@
 import React, { useEffect, useState } from "react";
+import BancoImg from "../../imgs/banco.png";
+import MuseuImg from "../../imgs/museu.png";
+import PitstopsImg from "../../imgs/pitstops.png";
 import PodioImg from "../../imgs/podio.png";
+import RebloxSolucaoImg from "../../imgs/rebloxsolucao.png";
+import TesteImg from "../../imgs/teste.png";
 
-const images = [PodioImg, PodioImg, PodioImg, PodioImg, PodioImg, PodioImg];
+const images = [
+  BancoImg,
+  MuseuImg,
+  PitstopsImg,
+  PodioImg,
+  RebloxSolucaoImg,
+  TesteImg,
+];
 
 const Galery = () => {
   const [slideshowOpen, setSlideshowOpen] = useState(false);
@@ -79,10 +91,10 @@ const Galery = () => {
             alt={`Slideshow Image ${currentIndex + 1}`}
             className="max-h-full w-full max-w-screen-md"
           />
-          <button onClick={prevImage} className="absolute text-4xl left-20 text-white">
+          <button onClick={prevImage} className="p-8 absolute text-4xl left-0 md:left-12 text-white">
             ❮
           </button>
-          <button onClick={nextImage} className="absolute text-4xl right-20 text-white">
+          <button onClick={nextImage} className="p-8 absolute text-4xl right-0 md:right-12 text-white">
             ❯
           </button>
         </div>
