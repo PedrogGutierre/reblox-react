@@ -17,7 +17,7 @@ const Home = () => {
   return (
     <main className="bg-light-gray flex flex-col items-center">
       {/* Banner Principal */}
-      <section className="relative w-full h-[90vh] flex justify-center items-center bg-banner-image bg-cover backdrop-brightness-50 bg-force-left">
+      <section className="relative w-full h-[90vh] flex justify-center items-center bg-banner-image bg-cover backdrop-brightness-50 bg-force-left md:bg-center">
         <div className=" text-center bg-opacity-60 z-10 flex flex-col justify-center items-center gap-4 w-full h-full bg-black">
           <h1 className="text-5xl font-bold text-light-white">
             Imersão Virtual na Fórmula E

@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       backgroundPosition:{
-        "force-left":" 200%"
+        "force-left": "200%"
       },
       backgroundImage:{
         "logo-pattern":"url('/src/imgs/logoBackground.png')",
