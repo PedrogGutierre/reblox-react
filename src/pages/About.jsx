@@ -1,5 +1,8 @@
 import Button from "../components/Button";
+
 import PrimeiroCarro from "../imgs/primeiro-carro.jpg";
+import imgSustentavel from "../imgs/sustentavel.png"
+import imgSolucao from "../imgs/rebloxsolucao.png"
 
 const About = () => {
 
@@ -8,7 +11,7 @@ const About = () => {
   return (
     <main className="w-full flex justify-center py-20 bg-light-gray">
       <div className="flex flex-col items-center w-full max-w-screen-lg gap-8 px-6 md:px-0">
-        <section className="w-full">
+        <section className="w-full flex flex-col items-center">
           <h3 className="bg-secondary-blue text-light-white text-center w-full font-bold text-3xl py-4 mb-6">
             O que é a Fórmula E?
           </h3>
@@ -23,7 +26,7 @@ const About = () => {
           <img
             src={PrimeiroCarro}
             alt="Primeiro carro elétrico"
-            className="w-full h-auto rounded-lg mb-6"
+            className="w-full h-auto rounded-lg mb-6 max-w-screen-md"
           />
           <p className="text-lg text-justify leading-relaxed">
             Além de ser um laboratório de testes para os carros elétricos, a
@@ -33,7 +36,7 @@ const About = () => {
           </p>
         </section>
 
-        <section className="w-full">
+        <section className="w-full flex flex-col items-center">
           <h3 className="bg-secondary-blue text-light-white text-center w-full font-bold text-3xl py-4 mb-6">
             Impacto e Sustentabilidade
           </h3>
@@ -45,9 +48,9 @@ const About = () => {
             em grandes cidades, promovendo um futuro mais sustentável.
           </p>
           <img
-            src={PrimeiroCarro}
+            src={imgSustentavel}
             alt="Impacto Sustentável"
-            className="w-full h-auto rounded-lg mb-6"
+            className="w-full h-auto rounded-lg mb-6 max-w-screen-md"
           />
           <p className="text-lg text-justify leading-relaxed">
             O campeonato também tem um forte compromisso com a neutralidade de
@@ -71,9 +74,9 @@ const About = () => {
             envolvente no Roblox.
           </p>
           <img
-            src={PrimeiroCarro}
+            src={imgSolucao}
             alt="Experiência no Roblox"
-            className="w-full h-auto rounded-lg mb-6"
+            className="w-full h-auto rounded-lg mb-6 max-w-screen-md"
           />
           <p className="text-lg text-justify leading-relaxed mb-8">
             Com nossa solução, os usuários podem explorar o mundo da Fórmula E,
