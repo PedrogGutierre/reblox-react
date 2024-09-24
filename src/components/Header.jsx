@@ -3,8 +3,8 @@ import {Link} from "react-router-dom"
 
 const Header = () => {
   return (
-    <header className="fixed top-0 w-full bg-primary-blue py-3 z-50">
-      <div className="max-w-7xl flex justify-between items-center px-8">
+    <header className="fixed top-0 flex justify-center w-full bg-primary-blue py-3 z-50">
+      <div className="max-w-7xl flex w-full justify-between items-center px-8">
         <Link to="/">
           <img className="w-48" src={Logo} alt="" />
         </Link>
