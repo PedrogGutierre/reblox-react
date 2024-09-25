@@ -11,7 +11,7 @@ import imgReblox from "../imgs/rebloxsolucao.png"
 
 const Home = () => {
 
-  // scrollTo(0,0)
+  scrollTo(0,0)
 
 
   return (
@@ -30,7 +30,7 @@ const Home = () => {
       </section>
 
       {/* Introdução à Fórmula E */}
-      <section className="px-4 w-full flex flex-col gap-12 items-center max-w-screen-lg py-16 md:px-0">
+      <section className="px-4 w-full flex flex-col gap-12 items-center text-center max-w-screen-lg py-16 md:px-0">
         <h2 className="text-3xl font-bold">O que é a Fórmula E?</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <p className="text-lg leading-relaxed">
@@ -46,17 +46,23 @@ const Home = () => {
 
       {/* Problema */}
       <section className="w-full bg-primary-blue text-light-white py-48 bg-logo-pattern bg-cover">
-        <div className="max-w-screen-lg grid gap-4 grid-cols-1 md:grid-cols-5 mx-auto px-6 md:px-0">
-          <div className="flex flex-col col-span-2 justify-center">
-            <h2 className="text-3xl font-bold mb-6">Nossa Solução</h2>
-            <p className="text-lg leading-relaxed mb-8">
+        <div className="max-w-screen-lg grid gap-4 text-center grid-cols-1 md:grid-cols-5 mx-auto px-6 md:px-0">
+          <div className="flex flex-col items-center col-span-2 justify-center gap-6">
+            <h2 className="text-3xl font-bold">Nossa Solução</h2>
+            <p className="text-lg leading-relaxed">
               Desenvolvemos uma experiência virtual no Roblox que permite ao
               público vivenciar o mundo da Fórmula E de maneira interativa e
               imersiva.
             </p>
+          <div className="flex-1 grid-cols-2 grid-rows-2 col-span-3 grid md:hidden">
+            <img className="aspect-video" src={imgBanco} alt="" />
+            <img className="aspect-video" src={imgPitstops} alt="" />
+            <img className="aspect-video" src={imgPodio} alt="" />
+            <img className="aspect-video" src={imgReblox} alt="" />
+          </div>
             <Button label="Veja como resolvemos isso" href="/solution" />
           </div>
-          <div className="grid flex-1 grid-cols-2 grid-rows-2 col-span-3">
+          <div className="hidden flex-1 grid-cols-2 grid-rows-2 col-span-3 md:grid">
             <img className="aspect-video" src={imgBanco} alt="" />
             <img className="aspect-video" src={imgPitstops} alt="" />
             <img className="aspect-video" src={imgPodio} alt="" />

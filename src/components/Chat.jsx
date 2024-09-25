@@ -17,9 +17,9 @@ const Chat = () => {
   };
 
   return (
-    <div className="fixed right-4 bottom-4 flex flex-col items-end gap-2">
+    <div className="fixed right-0 w-full px-4 bottom-4 flex flex-col items-end gap-2">
       {chatOpened && (
-        <div className="bg-light-white h-96 w-96 rounded flex flex-col overflow-auto relative justify-between shadow-2xl">
+        <div className="bg-light-white max-w-full h-72 md:h-96 w-full md:w-96 rounded flex flex-col overflow-auto relative justify-between shadow-2xl">
           <ul className="flex flex-col gap-2 pb-4 p-4 items-end">
             {messages &&
               messages.map((msg, index) => {
