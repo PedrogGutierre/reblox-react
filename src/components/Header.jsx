@@ -1,10 +1,10 @@
 import Logo from "../imgs/logo.png";
 import { Link } from "react-router-dom";
-import { Close, Menu, X } from "@mui/icons-material";
+import { Close, Menu,} from "@mui/icons-material";
 import { useState } from "react";
 
 const Header = () => {
-  const [menuOpened, setMenuOpened] = useState(false);
+  const [menuOpened, setMenuOpened] = useState(true);
 
   return (
     <header className="fixed top-0 flex justify-center w-full bg-primary-blue py-3 z-50">
@@ -13,7 +13,7 @@ const Header = () => {
           <img className="w-48" src={Logo} alt="" />
         </Link>
 
-        <div className="text-light-white flex md:hidden" onClick={() => setMenuOpened(true)}>
+        <div className="text-light-white flex md:hidden cursor-pointer" onClick={() => setMenuOpened(true)}>
           <Menu fontSize="large" />
         </div>
 
@@ -21,7 +21,7 @@ const Header = () => {
           <div className="w-screen h-screen z-50 fixed top-0 left-0 bg-blue-900 text-light-white flex justify-center">
             <Close
               fontSize="large"
-              className="fixed z-50 top-4 right-4"
+              className="fixed z-50 top-4 right-4 cursor-pointer"
               onClick={() => setMenuOpened(false)}
             />
 
